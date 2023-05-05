@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<body>
+    {% block body %}
+    
+    
+        
+        <div class="row">
+            {% for i in mv %}
+            <div class="col-sm-3">
+                <img class="img-responsive" alt="image not found" src="{{i.imag.url}}" width="250px" height="180px"><br>
+                <a href=" {% url 'movieapp:detail' i.id %}">{{i.name}}</a><br><br>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="registerbtn"><a href="add">add movie</button>
+        {% endblock  %}
+</body>
+</html>

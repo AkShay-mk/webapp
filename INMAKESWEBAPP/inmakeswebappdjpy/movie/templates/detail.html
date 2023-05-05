@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+<body>
+{% block body %}
+        
+        <img src="{{moviee.imag.url}}" width="100px" height="100px"><br>
+        {{moviee.name}}<br>
+        {{moviee.desc}}<br>
+        {{moviee.year}}<br>
+        <button type="submit" class="registerbtn"><a href={% url 'movieapp:update' moviee.id %}>update</a></button>
+        <button type="submit" class="registerbtn"><a href={% url 'movieapp:delete' moviee.id %}>delete</a></button>
+
+        {% endblock %}
+</body>
+</html>
